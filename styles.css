@@ -77,6 +77,15 @@ nav ul {
   margin: 10px auto;
   overflow: hidden;
   position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+}
+
+@media (max-width: 1024px) {
+  #hero-images {
+    margin-top: 9rem;
+  }
 }
 
 #hero-image1 {
@@ -166,7 +175,7 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 #features h4,
@@ -188,8 +197,8 @@ h3 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 2rem;
-  gap: 12rem;
+  padding: 2rem 2rem;
+  gap: 6rem;
 }
 
 .feature-grid {
@@ -371,6 +380,15 @@ iframe {
   max-width: 100%;
 }
 
+@media (max-width: 768px) {
+  .pre-order-grid {
+    grid-template-areas:
+      "vision-pro-ultra"
+      "vision-pro"
+      "vision-se";
+  }
+}
+
 .product-colors {
   margin-bottom: 1rem;
   display: flex;
@@ -534,11 +552,27 @@ iframe {
 
 footer {
   background-color: #161617;
-  padding: 0 6rem;
+  padding: 8px 6rem;
   display: flex;
   flex-direction: column;
-  height: 10vh;
+  height: fit-content;
   font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .bottom-footer {
+    gap: 8px;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 425px) {
+  footer {
+    padding: 4px 4px;
+  }
+  footer .extras {
+    gap: 8px;
+  }
 }
 
 .CTA {
@@ -582,9 +616,7 @@ footer {
 }
 
 @media (max-width: 1440px) {
-  #hero {
-    height: 70vh;
-  }
+
   .feature-grid {
     display: grid;
     grid-template-areas:
@@ -598,19 +630,19 @@ footer {
     margin-inline: auto;
   }
   .feature-1 {
-    height: 33vh;
+    height: fit-content;
   }
 
   .feature-2 {
-    height: 15vh;
+    height: fit-content;
   }
 
   .feature-3 {
-    height: 15vh;
+    height: fit-content;
   }
 
   .feature-4 {
-    height: 22vh;
+    height: fit-content;
   }
 }
 
@@ -630,18 +662,18 @@ footer {
     margin-inline: auto;
   }
   .feature-1 {
-    height: 25vh;
+    height: fit-content;
   }
 
   .feature-2 {
-    height: 12vh;
+    height: fit-content;
   }
 
   .feature-3 {
-    height: 12vh;
+    height: fit-content;
   }
 
   .feature-4 {
-    height: 22vh;
+    height: fit-content;
   }
 }
