@@ -5,9 +5,11 @@
 }
 
 body {
-  background-color: #47014d;
+  background-color: inherit;
   font-family: "SF Pro Display", sans-serif;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 main {
@@ -15,11 +17,12 @@ main {
 }
 
 #header {
+  padding: 0 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   height: 50px;
   gap: 20%;
   z-index: 2;
@@ -31,9 +34,6 @@ main {
 }
 
 .logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: white;
   font-weight: 900;
   width: 400px;
@@ -55,9 +55,83 @@ nav ul {
 .nav-link,
 .logo a {
   text-decoration: none;
-  color: white;
+  color: rgba(255, 255, 255, .8);
   display: flex;
   align-items: center;
+}
+
+.nav-link {
+  transition: 0.7s ease;
+}
+
+.nav-link:hover {
+  color:#FFFF;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 20px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: rgba(255, 255, 255, .8);;
+  
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    z-index: 2;
+  }
+
+  .hamburger.active .bar:nth-child(1){
+    transform-origin: center;
+    transform: translateY(2px) rotate(45deg);
+  }
+  
+  .hamburger.active .bar:nth-child(2){
+    transform-origin: center;
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    z-index: 1;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    transition: 0.3s;
+    background-color: #161617;
+    width: 100%;
+  }
+
+  .nav-menu.active {
+    top: 50px;
+    z-index: 1;
+    justify-content: flex-start;
+    gap: 4rem;
+    padding: 4rem;
+    align-items: flex-start;
+    color: rgba(0, 255, 255, .8);
+  }
+  .nav-menu.active li a{
+    color: rgba(255, 255, 255, .8);
+    transition: 0.3s;
+  }
+
+  .nav-menu.active li a:hover{
+    color: #FFFF;
+  }
+}
+
+section {
+  min-width: 100vw;
 }
 
 #hero {
