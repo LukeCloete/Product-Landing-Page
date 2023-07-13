@@ -16,6 +16,8 @@ Built as part of the certification projects for [freeCodeCamp.org.](https://www.
 
 ## Screenshot
 
+![Vision Series](https://github.com/LukeCloete/Product-Landing-Page/assets/114778021/ae746be3-8a71-40ff-8b3c-b7e4a6401d5a)
+
 ## Technologies
 
 - Html
