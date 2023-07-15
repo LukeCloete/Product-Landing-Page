@@ -20,5 +20,6 @@ Built as part of the certification projects for [freeCodeCamp.org.](https://www.
 
 ## Technologies
 
+-Javascript
 - Html
 - Vanilla CSS
