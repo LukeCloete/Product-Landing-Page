@@ -88,20 +88,26 @@ nav ul {
   .hamburger {
     display: block;
     z-index: 2;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .hamburger.active .bar:nth-child(1){
     transform-origin: center;
     transform: translateY(2px) rotate(45deg);
+    -webkit-tap-highlight-color: transparent;
   }
   
   .hamburger.active .bar:nth-child(2){
     transform-origin: center;
     transform: translateY(-6px) rotate(-45deg);
+    -webkit-tap-highlight-color: transparent;
+
   }
 
   .nav-menu {
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     z-index: 1;
     position: fixed;
     top: -100%;
@@ -109,24 +115,50 @@ nav ul {
     transition: 0.3s;
     background-color: #161617;
     width: 100%;
+    animation: fade-out 0.5s ease-out;
   }
 
+  
+
   .nav-menu.active {
+    opacity: 1;
     top: 50px;
     z-index: 1;
+    display: flex;
     justify-content: flex-start;
     gap: 4rem;
     padding: 4rem;
     align-items: flex-start;
-    color: rgba(0, 255, 255, .8);
+    animation: fade-in 0.5s ease-in-out;
   }
-  .nav-menu.active li a{
-    color: rgba(255, 255, 255, .8);
-    transition: 0.3s;
+  
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
   }
 
-  .nav-menu.active li a:hover{
-    color: #FFFF;
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+
+  0% {
+    opacity: 1;
   }
 }
 
