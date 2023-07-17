@@ -492,7 +492,9 @@ iframe {
       "vision-pro-ultra"
       "vision-pro"
       "vision-se";
+      gap: 6rem;
   }
+
 }
 
 .product-colors {
