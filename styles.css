@@ -188,7 +188,13 @@ section {
   padding-top: 3rem;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1000px) {
+  #hero-images {
+    margin-top: 9rem;
+  }
+}
+
+@media (min-width: 1024px) {
   #hero-images {
     margin-top: 1rem;
   }
