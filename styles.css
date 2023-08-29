@@ -171,7 +171,7 @@ section {
   display: flex;
   flex-direction: column;
   color: white;
-  height: 100vh;
+  height: 120vh;
   background-color: black;
   width: 100%;
 }
@@ -190,7 +190,7 @@ section {
 
 @media (max-width: 1024px) {
   #hero-images {
-    margin-top: 9rem;
+    margin-top: 1rem;
   }
 }
 
@@ -277,11 +277,28 @@ form {
 
 #features {
   background-color: #161617;
-  height: 150vh;
+  height: 220vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+}
+
+@media (min-width: 769px) {
+  #features {
+    height: 120vh;
+  }
+
+  #features .container {
+    justify-content: center;
+    border: 4px solid pink;
+   }
+}
+
+@media (min-width: 1000px) {
+  #features {
+    height: 160vh;
+  }
 }
 
 #features h4,
@@ -299,10 +316,11 @@ h3 {
 }
 
 #features .container {
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 2rem 1rem;
   gap: 6rem;
 }
@@ -418,7 +436,7 @@ h3 {
 
 .feature-4 {
   height: 40vh;
-  padding: 0 2rem;
+  padding: 0.5rem 2rem;
   grid-area: feature-4;
   border-radius: 0.5rem;
   background-color: black;
@@ -447,7 +465,7 @@ h3 {
   background-color: black;
   height: 100vh;
   font-size: 28px;
-  padding: 6rem 4rem;
+  padding: 6rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -767,6 +785,41 @@ footer {
     gap: 1vh;
     width: 60%;
     height: 40vh;
+    margin-inline: auto;
+  }
+  .feature-1 {
+    height: fit-content;
+  }
+
+  .feature-2 {
+    height: fit-content;
+  }
+
+  .feature-3 {
+    height: fit-content;
+  }
+
+  .feature-4 {
+    height: fit-content;
+  }
+}
+
+@media (max-width: 400px) {
+  #features {
+    height: 220vh;
+  }
+  .feature-grid {
+    display: grid;
+    grid-template-areas:
+      "feature-1"
+      "feature-1"
+      "feature-2"
+      "feature-3"
+      "feature-4"
+      "feature-4";
+    gap: 5vh;
+    width: 100%;
+    height: 100%;
     margin-inline: auto;
   }
   .feature-1 {
